@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01-products
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: ddl/01-products.sql
+            relativeToChangelogFile: true
+            endDelimiter: ;
+  - changeSet:
+      id: 02-categories
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: ddl/02-categories.sql
+            relativeToChangeLogFile: true
+            endDelimiter: ;
+  - changeSet:
+      id: 03-images
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: ddl/03-images.sql
+            relativeToChangeLogFile: true
+            endDelimiter: ;
+  - changeSet:
+      id: 04-product_categories
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: ddl/04-product_categories.sql
+            relativeToChangeLogFile: true
+            endDelimiter: ;
+  - changeSet:
+      id: 01-categories_reg
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: dml/01-categories.sql
+            relativeToChangeLogFile: true
+            endDelimiter: ;

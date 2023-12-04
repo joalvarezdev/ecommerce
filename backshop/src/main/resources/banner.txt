@@ -1,0 +1,13 @@
+ooooo      ooo                                     .o.       ooooooooo.   ooooo
+`888b.     `8'                                    .888.      `888   `Y88. `888'
+ 8 `88b.    8   .ooooo.  oooo oooo    ooo        .8"888.      888   .d88'  888
+ 8   `88b.  8  d88' `88b  `88. `88.  .8'        .8' `888.     888ooo88P'   888
+ 8     `88b.8  888ooo888   `88..]88..8'        .88ooo8888.    888          888
+ 8       `888  888    .o    `888'`888'        .8'     `888.   888          888
+o8o        `8  `Y8bod8P'     `8'  `8'        o88o     o8888o o888o        o888o
+
+
+${application.title} ${application.version}
+Powered by Spring Boot ${spring-boot.version}
+Please refer to https://devops.datenkollektiv.de/banner.txt/index.html to create your own banner!
+Banner Font: roman
