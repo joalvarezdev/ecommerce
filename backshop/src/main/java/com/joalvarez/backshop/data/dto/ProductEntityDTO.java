@@ -5,7 +5,7 @@ import com.joalvarez.baseframework.data.dto.BaseDTO;
 
 import java.util.Set;
 
-public class ProductEntDTO implements BaseDTO {
+public class ProductEntityDTO implements BaseDTO {
 
 	private ProductDTO product;
 	private Set<Categories> categories;

@@ -1,13 +1,14 @@
 package com.joalvarez.backshop.controller;
 
-import com.joalvarez.backshop.data.dto.ProductDTO;
-import com.joalvarez.backshop.data.dto.ProductEntDTO;
+import com.joalvarez.backshop.data.dto.ProductEntityDTO;
 import com.joalvarez.backshop.service.ProductService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("products")
@@ -20,7 +21,16 @@ public class ProductController {
 	}
 
 	@PostMapping
-	public ResponseEntity<ProductEntDTO> save(@RequestBody ProductEntDTO product) {
+	public ResponseEntity<ProductEntityDTO> save(@RequestBody ProductEntityDTO product) {
 		return ResponseEntity.ok(this.service.save(product));
+	}
+
+	@GetMapping
+	public ResponseEntity<Page<ProductEntityDTO>> getAllPaginated(
+		@ApiIgnore Pageable pageable,
+		@RequestParam(required = false) Integer page,
+		@RequestParam(required = false) Integer size
+		) {
+		return ResponseEntity.ok(this.service.getAllPaginated(pageable));
 	}
 }

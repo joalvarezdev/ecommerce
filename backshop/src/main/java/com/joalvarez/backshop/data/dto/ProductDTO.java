@@ -22,9 +22,7 @@ public class ProductDTO implements BaseDTO {
 	private Double discountPercentage;
 	private Integer stock;
 	private String brand;
-	private Set<Categories> categories;
 	private String thumbnail;
-	private List<String> images;
 
 	public UUID getId() {
 		return id;
@@ -82,27 +80,11 @@ public class ProductDTO implements BaseDTO {
 		this.brand = brand;
 	}
 
-	public Set<Categories> getCategories() {
-		return categories;
-	}
-
-	public void setCategories(Set<Categories> categories) {
-		this.categories = categories;
-	}
-
 	public String getThumbnail() {
 		return thumbnail;
 	}
 
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
-	}
-
-	public List<String> getImages() {
-		return images;
-	}
-
-	public void setImages(List<String> images) {
-		this.images = images;
 	}
 }

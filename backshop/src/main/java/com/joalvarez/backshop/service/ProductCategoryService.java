@@ -12,8 +12,10 @@ import com.joalvarez.backshop.data.types.Categories;
 import com.joalvarez.baseframework.service.BaseService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductCategoryService extends BaseService<ProductCategoryDAO, ProductCategoryMapper, ProductCategoryDTO,
@@ -43,4 +45,25 @@ public class ProductCategoryService extends BaseService<ProductCategoryDAO, Prod
 		});
 	}
 
+	public Set<Categories> findByProductId(UUID id) {
+		return this.dao.findByProductId(id)
+			.stream()
+			.map(register -> {
+				Categories[] values = Categories.values();
+				Categories value = values[register.getId().getCategoryId()];
+
+				return value;
+
+
+/*
+				ProductCategoryDTO productCategoryDTO = new ProductCategoryDTO();
+
+				productCategoryDTO.setProductId(id);
+				productCategoryDTO.setCategory(this.categoryService.findById(register.getId().getCategoryId()));
+
+				return productCategoryDTO;
+*/
+			})
+			.collect(Collectors.toSet());
+	}
 }
