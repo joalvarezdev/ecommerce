@@ -16,7 +16,6 @@ import java.util.List;
 @ControllerAdvice
 public class GlobalExceptionHandler implements HasLogger{
 
-
 	@ExceptionHandler(PersistenceException.class)
 	public ResponseEntity<ResponseDTO> handler(PersistenceException ex) {
 		final ResponseDTO responseDTO = new ResponseDTO();
@@ -52,13 +51,6 @@ public class GlobalExceptionHandler implements HasLogger{
 
 	@ExceptionHandler(HttpMessageNotReadableException.class)
 	public ResponseEntity<ResponseDTO> handler(HttpMessageNotReadableException ex) {
-/*
-		StringBuilder message = new StringBuilder("Error: ");
-		message
-			.append(ex.getHttpStatus().toString())
-			.append(": ").append(ex.getInternalCode().message())
-			.append(": ").append(ex.getMessage());
-*/
 		final ResponseDTO responseDTO = new ResponseDTO();
 		responseDTO.setCode(23);
 		responseDTO.setMessage(ex.getMessage());

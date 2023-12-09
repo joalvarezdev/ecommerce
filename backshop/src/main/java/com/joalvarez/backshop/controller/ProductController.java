@@ -8,8 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("products")
 public class ProductController {
@@ -27,9 +25,7 @@ public class ProductController {
 
 	@GetMapping
 	public ResponseEntity<Page<ProductEntityDTO>> getAllPaginated(
-		@ApiIgnore Pageable pageable,
-		@RequestParam(required = false) Integer page,
-		@RequestParam(required = false) Integer size
+		@ApiIgnore Pageable pageable
 		) {
 		return ResponseEntity.ok(this.service.getAllPaginated(pageable));
 	}

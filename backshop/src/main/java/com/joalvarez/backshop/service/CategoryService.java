@@ -31,15 +31,4 @@ public class CategoryService extends BaseService<CategoryDAO, CategoryMapper, Ca
 				"Un msg"
 			));
 	}
-
-	public CategoryDTO findById(int categoryId) {
-		Categories[] values = Categories.values();
-		Categories value = values[categoryId];
-
-		CategoryDTO dto = new CategoryDTO();
-		dto.setId(value.ordinal());
-		dto.setDescription(value.name());
-
-		return dto;
-	}
 }
