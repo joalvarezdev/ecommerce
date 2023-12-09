@@ -13,5 +13,4 @@ public class CategoryMapper extends BaseMapper<CategoryDTO, Category> {
 		super(mapper);
 	}
 
-
 }

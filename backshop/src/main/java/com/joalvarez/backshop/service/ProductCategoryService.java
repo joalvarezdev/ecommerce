@@ -53,16 +53,6 @@ public class ProductCategoryService extends BaseService<ProductCategoryDAO, Prod
 				Categories value = values[register.getId().getCategoryId()];
 
 				return value;
-
-
-/*
-				ProductCategoryDTO productCategoryDTO = new ProductCategoryDTO();
-
-				productCategoryDTO.setProductId(id);
-				productCategoryDTO.setCategory(this.categoryService.findById(register.getId().getCategoryId()));
-
-				return productCategoryDTO;
-*/
 			})
 			.collect(Collectors.toSet());
 	}

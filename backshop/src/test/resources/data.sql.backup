@@ -1,0 +1,11 @@
+-- CATEGORIES
+
+insert into categories (id, description)
+value (0, 'NAVIDENO');
+
+insert into categories (id, description)
+value (1, 'DECO');
+
+insert into categories (id, description)
+value (2, 'BEBE');
+

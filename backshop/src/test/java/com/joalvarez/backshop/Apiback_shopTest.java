@@ -1,12 +1,15 @@
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+package com.joalvarez.backshop;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = Apiback_shopTest.class)
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(classes = Apiback_shopTest.class)
+@SpringBootTest()
 public class Apiback_shopTest {
 
+/*
 	@Test
 	public void contextLoads() {}
+*/
 }

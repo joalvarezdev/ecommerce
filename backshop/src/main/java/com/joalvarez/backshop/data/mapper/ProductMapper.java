@@ -17,22 +17,4 @@ public class ProductMapper extends BaseMapper<ProductDTO, Product> {
 		super(mapper);
 	}
 
-/*
-	@Override
-	public Product fromDTO(ProductDTO entity) {
-		Product product = new Product();
-
-		product.setId(entity.getId());
-		product.setTitle(entity.getTitle());
-		product.setDescription(entity.getDescription());
-		product.setPrice(entity.getPrice());
-		product.setDiscountPercentage(entity.getDiscountPercentage());
-		product.setStock(entity.getStock());
-		product.setThumbnail(entity.getThumbnail());
-		product.setBrand(entity.getBrand());
-
-		return product;
-	}
-*/
-
 }
